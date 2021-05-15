@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ10</title>
+</head>
+<body>
+<script>
+    /*Цикл WHILE*/
+    /*задание1*/
+    let i = 0;
+    let num = +prompt('Введите число:');
+    while (i < num) {
+        i++;
+        document.write(`#`);
+    }
+</script>
+<script>
+    /*задание2*/
+    let num1 = +prompt('Введите число:');
+    let j = num1;
+    while (j >= 0) {
+        document.write(`${j}`);
+        j--;
+    }
+</script>
+<script>
+    /*задание3*/
+    let num2 = +prompt('Введите число:');
+    let num3 = +prompt('Введите число степени:');
+    let k = 1;
+    let result = num2;
+    while (k < num3) {
+        k++;
+        result *= num2;
+    }
+    document.write(`${result}`);
+</script>
+<script>
+    /*задание4*/
+    let num4 = +prompt('Введите первое число:');
+    let num5 = +prompt('Введите второе число:');
+    let l = 1;
+    while ((l <= num4) && (l <= num5)) {
+        l++;
+        if ((num4 % l === 0) && (num5 % l === 0)) {
+            document.write(`${l} <br>`);
+        }
+    }
+</script>
+<script>
+    /*задание5*/
+    let num6 = +prompt('Введите число:');
+    let m = 0;
+    let sum = 1;
+    while (m < num6) {
+        m++;
+        sum *= m;
+    }
+    document.write(`Факториал = ${sum}`);
+</script>
+<script>
+    /*Цикл DO WHILE*/
+    /*задание1*/
+    let num7;
+    do {
+        num7 = +prompt('Решите пример:2+2*2=:');
+    } while (num7 !== 6);
+    alert(`Верно`);
+</script>
+<script>
+    /*задание2*/
+    let num8 = 1000;
+    let n = 0;
+    do {
+        num8 /= 2;
+        n++;
+    } while (num8 >= 50);
+    alert(`Число ${num8} количество делений ${n}`);
+</script>
+<script>
+    /*Цикл FOR*/
+    /*задание1*/
+    let num9 = +prompt('Введите число:');
+    for (let i = 1; i <= 100; i++) {
+        if (i % num9 === 0) {
+            document.write(`${i} <br>`);
+        }
+    }
+</script>
+<script>
+    /*задание2*/
+    let num10 = +prompt('Введите минимальное число диапазона:');
+    let num11 = +prompt('Введите масимальное число диапазона:');
+    for (let i = num10; i <= num11; i++) {
+        if ((i - num10) % 4 === 0 && i - num10 !== 0) {
+            document.write(`${i} <br>`)
+        }
+    }
+</script>
+<script>
+    /*задание3*/
+    let num12 = +prompt('Введите число:');
+    for (let i = 2; i < num12; i++) {
+        if (num12 % i === 0) {
+            alert('Не простое число');
+            break;
+        } else {
+            alert('Простое число');
+            break;
+        }
+    }
+</script>
+</body>
+</html>
